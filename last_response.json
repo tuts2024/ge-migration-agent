@@ -1,0 +1,33 @@
+
+{
+  "form_name": "Work Order",
+  "fields": [
+    {
+      "field_id": "service_type",
+      "display_name": "Service Type",
+      "type": "dropdown",
+      "options": [
+        "Installation",
+        "Repair",
+        "Maintenance",
+        "Audit"
+      ]
+    },
+    {
+      "field_id": "priority",
+      "display_name": "Priority Level",
+      "type": "radio",
+      "options": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    {
+      "field_id": "inspector_name",
+      "display_name": "Inspector Name",
+      "type": "text",
+      "options": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+
+{
+  "form_fields": [
+    {
+      "field_id": "inspector_name",
+      "display_name": "Inspector Name",
+      "type": "text",
+      "data_field": "inspector_name"
+    },
+    {
+      "field_id": "emp_id",
+      "display_name": "Employee ID",
+      "type": "text",
+      "data_field": "emp_id"
+    },
+    {
+      "field_id": "site_location",
+      "display_name": "Site Location",
+      "type": "text",
+      "data_field": "site_code"
+    },
+    {
+      "field_id": "safety_gear_checklist",
+      "display_name": "Safety Gear Checklist",
+      "type": "checklist",
+      "data_field": "safety_gear_check"
+    },
+    {
+      "field_id": "site_photo",
+      "display_name": "Site Photo",
+      "type": "photo",
+      "data_field": "site_photo"
+    },
+    {
+      "field_id": "foreman_signature",
+      "display_name": "Foreman Signature",
+      "type": "signature",
+      "data_field": "foreman_signature"
+    }
+  ]
+}
