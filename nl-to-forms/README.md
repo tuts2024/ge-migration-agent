@@ -41,7 +41,7 @@ This demo showcases a complete, end-to-end workflow:
 ## Tech Stack
 
 * **Backend**: Python 3, Flask
-* **AI**: Google Cloud Vertex AI with the `gemini-1.5-flash-preview-0514` model
+* **AI**: Google Cloud Vertex AI with the `gemini` model
 * **Data Handling**: Pandas
 * **Frontend**: HTML5, CSS3, Vanilla JavaScript
 * **Third-Party Libraries**: SortableJS (for drag-and-drop functionality)
@@ -115,7 +115,29 @@ Open your web browser and navigate to `http://127.0.0.1:5000`.
 
 Once the application is running, try entering prompts like these in the form generator:
 
+Showcase 1: From Physical to Digital in Seconds
+
 * "I need a work order form to track the service type and priority level for the job, plus the inspector's name."
+
+    Click "📎 Attach File" and select the handwritten HealthForm_1920.png image.
+    - "Digitize this handwritten patient intake form. Please organize it into logical pages for 'Patient Information' and 'Medical History'."
+    - Click the "🤖 AI Actions" button on the AI's response.
+    Select "Analyze for Compliance".
+    Prompt - Can you add Aria label?
+    - Click "🤖 AI Actions".
+    Select "Suggest Workflows".
+
+Showcase 2: From Raw Data to Perfect Form
+- Click "Start New Build".
+    Upload a simple CSV file named leads.csv (you can create this in a text editor).
+    Use this prompt:
+    Prompt: "Here is a CSV export from our old sales system. Build a new lead capture form designed to capture this exact data structure."
+
+Showcase 3: Conversational Development & Complex Logic
+- Click "Start New Build".
+    Prompt 1: > "Create a form for IT hardware requests. Include 'Employee Name' and a dropdown for 'Device Type' with options for Laptop, Monitor, and Keyboard."
+    Prompt 2 (after it appears): > "That's perfect. Now, add a 'Laptop Model' dropdown with options for MacBook Pro and Dell XPS, but only show it if the user selects 'Laptop' as the Device Type."
+
 
 ---
 
