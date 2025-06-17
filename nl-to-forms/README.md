@@ -1,5 +1,5 @@
 
-# AI-Powered Form Generator Demo for doForms
+# AI-Powered Form Generator Demo
 
 ## Vision
 
@@ -7,7 +7,7 @@ From a single sentence to a fully interactive form in seconds, this demo showcas
 
 ## Overview
 
-This project is a high-fidelity prototype demonstrating how Google's **Vertex AI** and **Gemini models** can be integrated into a platform like doForms to revolutionize the form creation process. Instead of manually dragging and dropping fields, administrators can simply describe their needs in plain English. The AI interprets the request, consults a pre-defined data dictionary (`metadata.csv`), and generates a suggested form.
+This project is a high-fidelity prototype demonstrating how Google's **Vertex AI** and **Gemini models** can be integrated into a platform  to revolutionize the form creation process. Instead of manually dragging and dropping fields, administrators can simply describe their needs in plain English. The AI interprets the request, consults a pre-defined data dictionary (`metadata.csv`), and generates a suggested form.
 
 The true innovation is in the editing process, where the administrator can continue to use natural language to collaboratively refine the form with the AI, making for an unprecedentedly fast and intuitive workflow.
 
@@ -63,7 +63,7 @@ Follow these steps to get the demo running on your local machine.
 
 ### 2. Get the Files
 
-Ensure you have the following two files in a single project directory (e.g., `doforms-ai-demo/`):
+Ensure you have the following two files in a single project directory :
 
 * `app.py`
 * `metadata.csv`
@@ -75,11 +75,11 @@ Using a virtual environment is recommended to manage project dependencies and av
 ```bash
 sudo apt update
 sudo apt install python3-venv
-python3 -m venv doform
-source doform/bin/activate
+python3 -m venv form
+source form/bin/activate
 ```
 
-If you are on Windows, the activation command might be different (e.g., `.\doform\Scripts\activate`).
+If you are on Windows, the activation command might be different (e.g., `.\form\Scripts\activate`).
 
 ### 4. Install Dependencies
 
@@ -106,7 +106,7 @@ python app.py
 You will see output indicating the server has started, including:
 
 ```
-✅ Starting Flask App for doForms AI Demo on http://127.0.0.1:5000
+✅ Starting Flask App for forms AI Demo on http://127.0.0.1:5000
 ```
 
 Open your web browser and navigate to `http://127.0.0.1:5000`.
@@ -146,7 +146,7 @@ Showcase 3: Conversational Development & Complex Logic
 Your project directory should look like this to begin:
 
 ```
-/doforms-ai-demo/
+/forms-ai-demo/
 ├── app.py          # The main Flask application
 └── metadata.csv    # The data dictionary for the AI
 ```
