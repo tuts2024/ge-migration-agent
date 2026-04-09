@@ -1,0 +1,6 @@
+company_name,contact_first_name,contact_last_name,email,phone,lead_source,status,estimated_value,last_contact_date,notes
+Innovatech Solutions,Sarah,Jones,sarah.j@innovatech.com,555-0101,Website,Contacted,50000,2025-05-20,"Expressed interest in Q3 product lineup"
+Quantum Dynamics,Mark,Chen,m.chen@quantumdyn.com,555-0102,Trade Show,Qualified,120000,2025-06-01,"Follow-up meeting scheduled for next week. Needs pricing for enterprise tier."
+Apex Logistics,Emily,Rodriguez,emily.r@apexlog.com,555-0103,Referral,New,75000,2025-06-10,"Referred by John Smith at Innovatech."
+Stellar Designs,Brian,Miller,brian.m@stellardesigns.net,555-0104,Website,Unqualified,10000,2025-04-15,"Budget not approved for this fiscal year. Follow up in Q1 2026."
+NextGen Robotics,Laura,Wilson,laura.w@nextgenbots.com,555-0105,Cold Call,Contacted,95000,2025-06-05,"Initial call went well, sent brochure. Needs technical specs."
