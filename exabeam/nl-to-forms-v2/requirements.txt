@@ -1,5 +1,0 @@
-flask
-python-dotenv
-pandas
-google-cloud-aiplatform
-google-generativeai
