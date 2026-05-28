@@ -7,33 +7,8 @@ This project provides a specialized AI agent built with the Agent Development Ki
 The following diagram illustrates the high-level architecture of the migration agent and its interactions with various services.
 
 ```mermaid
-graph TD
-    subgraph "Local Environment"
-        A[ADK Web Playground] --> B(notebook_agent)
-        B --> C[agent.py]
-    end
+TBD
 
-    subgraph "Google Cloud"
-        C --> D[Discovery Engine API]
-        C --> E[Google Cloud Storage]
-        
-        subgraph "Target Environment"
-            D --> F[GE Agents]
-            D --> G[Notebooks / Knowledge Base]
-        end
-    end
-
-    subgraph "Source Environment (Conceptual)"
-        H[Google Workspace Gems] -.-> C
-        I[NotebookLM Notebooks] -.-> C
-    end
-
-    C --> J[mcp-codemind Server]
-    J --> K[Buganizer]
-    J --> L[Google Drive]
-    
-    classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
-    class D,E,F,G cloud;
 ```
 
 ## Key Features
