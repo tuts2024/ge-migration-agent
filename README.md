@@ -54,6 +54,35 @@ Here is a sample session showing how to migrate a batch of Gems:
 
 Here are some actual prompts and responses from a migration session:
 
+**User**: 
+> help
+> 
+**Agent**: 
+> Hello! I can help you migrate notebooks or manage employee-made agents.
+
+To get started, please provide the following details for your source environment:
+
+Project Number
+Project ID
+Region
+Engine ID
+And for your target environment:
+
+Project Number
+Project ID
+Region
+Target Engine ID
+Once I have these, I can assist you with tasks such as:
+
+Listing notebooks
+Migrating notebooks
+Listing employee-made agents
+Migrating employee-made agents
+Exporting agents to GCS
+Importing agents from GCS
+Creating agents from Gem instructions
+Importing multiple Gems from a file
+
 **User**: (Provides project details)
 > source project number <SOURCE_PROJECT_NUMBER>, project id <SOURCE_PROJECT_ID> , region global , engine id <SOURCE_ENGINE_ID> target project number <TARGET_PROJECT_NUMBER> , project id <TARGET_PROJECT_ID> , region global, Target engine id is <TARGET_ENGINE_ID>
 
@@ -72,6 +101,22 @@ Here are some actual prompts and responses from a migration session:
 **Agent**:
 > The agent 'QBR Generator' has been successfully migrated to your target environment.
 > WARNING: Some connectors were ignored: ['Monday Mcp', 'Ge Gmail', ...]
+
+**User**:
+> List all the notebooks alongwith name, source type, source, url.
+> 
+**Agent**:
+> I have retrieved the following notebooks and their sources:
+
+Notebook Name	Source Type	Source	URL
+ge	website	4 ways Gemini Enterprise makes work easier for everyone - Google Blog	https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/4-ways-gemini-enterprise-makes-work-easier-for-everyone/
+ge	website	Gemini Enterprise AI: Features, Use Cases & How It Helps Businesses	https://advantailabs.com/blog/google-gemini-enterprise-your-shortcut-to-effortless-productivity
+
+**User**:
+> Migrate the notebook named ge to target
+
+**Agent**:
+> The notebook "ge" and all its sources have been successfully migrated to the target environment.
 
 **User**:
 > Please import the Gems from the file /usr/local/google/home/ntuteja/ge-migration-agent/gemini_gems_data.html in Target
