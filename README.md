@@ -38,12 +38,26 @@ The following diagram illustrates the high-level architecture of the migration a
 
 ### 🛠️ Setup & Run
 
-1. **Configure Environment**: Ensure your GCP project is set up and ADC is configured.
-2. **Launch the Playground**:
+1. **Configure Environment**: Ensure your GCP project is set up and Application Default Credentials (ADC) are configured. Make sure your `.env` file matches the format in `ge_migration_agent/.env.sample`.
+2. **Option A: Run the Deterministic CLI (Highly Recommended)**:
+   For 100% reliable, fast, and deterministic execution of migrations without any AI dependencies, use the newly added root entrypoint script:
+   ```bash
+   # Show help and all available commands
+   ./migrate.py --help
+
+   # List notebooks in the source project
+   ./migrate.py list-notebooks
+
+   # Migrate an entire notebook and all of its sources atomically
+   ./migrate.py migrate-notebook "my-notebook-title" --source-project 12345 --target-project 67890
+   ```
+3. **Option B: Run the Conversational AI Agent**:
+   For natural language guidance and conversational interactions, launch the ADK playground:
    ```bash
    ./ge_migration_agent/run_web_playground.sh
    ```
-3. **Access the UI**: Open `http://localhost:8001` in your browser.
+   Open `http://localhost:8001` in your browser to chat with the agent. The agent is now powered by the exact same underlying deterministic core.
+
 
 ## 💡 Example Usage
 
