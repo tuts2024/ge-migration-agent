@@ -2,53 +2,25 @@
 
 > Seamlessly migrate your low-code agents and Custom Instructions (Gems) to Gemini Enterprise.
 
-Built with the **Agent Development Kit (ADK)**, this specialized AI agent facilitates the migration of agents and Gems from Google Workspace and NotebookLM environments to Gemini Enterprise (Vertex AI Reasoning Engine and Discovery Engine).
-
+Built with the **Agent Development Kit (ADK)**, this specialized AI agent facilitates the migration of low code agents and notebooklm from one Gemini Enterprise App to another and from Google Workspace Gems to Gemini Enterprise app. It can be further extended to supports migration of 3rd Party agents to Gemini Enterprise App via adapters(mappings between 3rd party agent and import format required by Gemini Enterprise App)
 
 ## Architecture
 
 The following diagram illustrates the high-level architecture of the migration agent and its interactions with various services.
 
-```mermaid
-graph TD
-    subgraph "Local Environment"
-        A[ADK Web Playground] --> B(ge_migration_agent)
-        B --> C[agent.py]
-    end
-
-    subgraph "Google Cloud"
-        C --> D[Discovery Engine API]
-        C --> E[Google Cloud Storage]
-        
-        subgraph "Target Environment"
-            D --> F[GE Agents]
-            D --> G[Notebooks / Knowledge Base]
-        end
-    end
-
-    subgraph "Source Environment (Conceptual)"
-        H[Google Workspace Gems] -.-> C
-        I[NotebookLM Notebooks] -.-> C
-    end
-
-    C --> J[mcp-codemind Server]
-    J --> K[Buganizer]
-    J --> L[Google Drive]
-    
-    classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
-    class D,E,F,G cloud;
-
-```
+![Architecture Diagram](./ge-migration-agent-architecture.png)
 
 ## 🛠️ Capabilities & Skills
 
-### 🤖 Agent & Gem Migration
+### 🤖 Agent Migration
 - **Discovery**: List and explore source low-code agents available for migration.
 - **Direct Migration**: Seamlessly transfer agent definitions to target Gemini Enterprise engines.
 - **GCS Staging**: Export definitions to Google Cloud Storage for isolated or staged migrations.
-- **Gem Processing**: Extract Custom Instructions (Gems) from HTML dumps, mapping descriptions and file references.
 
-### 📚 Knowledge Base Management
+### 💎 Gem Migration
+- **Gem Processing**: Extract Custom Instructions (Gems) from HTML dumps(takeout), mapping descriptions and file references.
+
+### 📚 Notebooklm migration
 - **Instant Notebooks**: Create NotebookLM-style knowledge bases in the target project.
 - **Batch Ingestion**: Rapidly populate notebooks with sources from web URLs.
 
@@ -77,16 +49,13 @@ graph TD
 
 Here is a sample session showing how to migrate a batch of Gems:
 
-1. **Upload Gems HTML**: Export your Gems from the source environment as an HTML file.
-2. **Batch Import**: Use the playground to upload the file and trigger the batch migration.
-3. **Verification**: The agent will process each Gem and create a corresponding Gemini Enterprise agent.
 
 ### Sample Session Traces
 
 Here are some actual prompts and responses from a migration session:
 
 **User**: (Provides project details)
-> source project number 404109417257, project id learn-w-me , region global , engine id enterprise-search-17416389_1741638989378 target project number 580163670732 , project id ipg-corp , region global, Target engine id is gemini-enterprise-17782044_1778204475194
+> source project number <SOURCE_PROJECT_NUMBER>, project id <SOURCE_PROJECT_ID> , region global , engine id <SOURCE_ENGINE_ID> target project number <TARGET_PROJECT_NUMBER> , project id <TARGET_PROJECT_ID> , region global, Target engine id is <TARGET_ENGINE_ID>
 
 **Agent**:
 > Thank you for providing the source and target environment details! I have stored them. ... What would you like to do next?
