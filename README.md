@@ -93,7 +93,21 @@ Importing multiple Gems from a file
 > List all the human made agents in source
 
 **Agent**:
-> I found the following employee-made agents in your source environment: ... (Lists agents)
+> I found the following employee-made agents in your source environment: ...
+> 
+| Display Name | Description |
+| :--- | :--- |
+| Email Strategists | Agent to help interact with your emails. |
+| Summarize Daily Emails | Retrieves and summarizes emails received within the last 24 hours. |
+| Daily Email Summarizer | Retrieves and summarizes emails from the past 24 hours. |
+| Schedule Meeting | Schedules a meeting on the calendar based on user input. |
+| QBR Generator | A central orchestration agent designed to generate comprehensive Quarterly Business Reviews (QBRs) by coordinating specialized data retrieval from sub-agents. It analyzes user requests, delegates to finance and sentiment experts, and synthesizes final reports. |
+| AI Informant Orchestrator | Orchestrates information gathering from various specialized agents and synthesizes the results into a comprehensive report. |
+| Google Stock Price Finder | Searches for and displays today's Google stock price. |
+
+....
+....
+....
 
 **User**:
 > Migrate QBR Generator from source to target
@@ -108,9 +122,13 @@ Importing multiple Gems from a file
 **Agent**:
 > I have retrieved the following notebooks and their sources:
 
-Notebook Name	Source Type	Source	URL
-ge	website	4 ways Gemini Enterprise makes work easier for everyone - Google Blog	https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/4-ways-gemini-enterprise-makes-work-easier-for-everyone/
-ge	website	Gemini Enterprise AI: Features, Use Cases & How It Helps Businesses	https://advantailabs.com/blog/google-gemini-enterprise-your-shortcut-to-effortless-productivity
+| Notebook Name | Source Title | Source URL |
+| :--- | :--- | :--- |
+| ge  | 4 ways Gemini Enterprise makes work easier for everyone - Google Blog | [Link](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/4-ways-gemini-enterprise-makes-work-easier-for-everyone/) |
+| ge  | Gemini Enterprise AI: Features, Use Cases & How It Helps Businesses | [Link](https://advantailabs.com/blog/google-gemini-enterprise-your-shortcut-to-effortless-productivity) |
+....
+....
+....
 
 **User**:
 > Migrate the notebook named ge to target
